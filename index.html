@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="./script.js"></script>
+</head>
+<body>
+    <header>
+        <img class="logo" src="./assets/logo-alura.png" alt="Alura logo">
+    </header>
+    <main>
+        <section class="input">
+            <textarea class="text_stream" id="input_stream" placeholder="Digite seu texto" cols="30" rows="10"></textarea>
+            <div class="ho">
+                <p class="warning"><img src="./assets/caution-icon.png">Apenas letras minusculas e sem acento</p>
+                <div class="button-section">
+                    <button class="buttons" id="cript_button" onclick="toCript()">Criptografar</button>
+                    <button class="buttons" id="decript_button" onclick="toDecript()">Descriptografar</button>
+                </Deciv>
+            </div>
+        </section>
+        <section class="output">
+            <textarea readonly="true" class="text_stream" id="output_stream" spellcheck="false" id="areaCopia" cols="25" rows="15"></textarea>
+            <div id="output_background">
+                <img src="./assets/imagem.svg">
+                <h2 class="info" id="title">Nenhuma mensagem encontrada</h2>
+                <p class="info" id="paragrafo">Digite um texto que você deseja criptografar ou descriptografar.</p>
+            </div>
+            <div id="mensagems">
+            </div>
+            <button class="buttons" id="copy-button" hidden>Copiar</button>
+        </section>
+    </main>
+</body>
+</html>
