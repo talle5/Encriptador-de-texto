@@ -71,19 +71,24 @@ function decript(str) {
 }
 
 function genElement(str) {
-    var tag = document.createElement("div");
-    var text = document.createTextNode(str);
+    let tag = document.createElement("div");
+    let text = document.createTextNode(str);
     let button = document.createElement("button");
     let img = document.createElement("img");
 
     img.setAttribute("src", "assets/bitmap.svg");
+
     button.setAttribute("class", "copy-button");
+    button.onclick = () => {
+        navigator.clipboard.writeText(str);
+    };
     button.appendChild(img);
+
     tag.setAttribute("class", "teste");
     tag.appendChild(text);
     tag.appendChild(button);
-    var element = document.getElementById("mensagems");
-    element.appendChild(tag);
+    
+    document.getElementById("mensagems").appendChild(tag);
 }
 
 function clean() {
