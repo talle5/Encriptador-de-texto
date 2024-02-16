@@ -1,9 +1,10 @@
 function toCript() {
     let str = document.getElementById("input_stream").value
     if (str != "") {
-        document.getElementById("output_background").style.display  = "none";
-        genElement();
-        document.getElementById("output_stream").innerHTML = encript(str);
+        document.getElementById("input_stream").value = "";
+        document.getElementById("output_background").style.display = "none";
+        genElement(encript(str));
+        //document.getElementById("output_stream").innerHTML = encript(str);
     }
 }
 
@@ -66,14 +67,19 @@ function decript(str) {
     return arr.join("");
 }
 
-function genElement(){
+function genElement(str) {
     var tag = document.createElement("div");
-    var text = document.createTextNode("Tutorix is the best e-learning platform");
+    var text = document.createTextNode(str);
     let button = document.createElement("button");
-    button.setAttribute("class","copy-button");
-    tag.setAttribute("class","teste");
+    let img = document.createElement("img");
+
+    img.setAttribute("src", "assets/bitmap.svg");
+    button.setAttribute("class", "copy-button");
+    button.appendChild(img);
+    tag.setAttribute("class", "teste");
     tag.appendChild(text);
     tag.appendChild(button);
+    // tag.style.width = "100%";
     var element = document.getElementById("mensagems");
     element.appendChild(tag);
 }
