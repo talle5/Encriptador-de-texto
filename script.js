@@ -11,7 +11,10 @@ function toCript() {
 function toDecript() {
     let str = document.getElementById("input_stream").value
     if (str != "") {
-        document.getElementById("output_stream").innerHTML = decript(str);
+        document.getElementById("input_stream").value = "";
+        document.getElementById("output_background").style.display = "none";
+        genElement(decript(str));
+        // document.getElementById("output_stream").innerHTML = decript(str);
     }
 }
 
