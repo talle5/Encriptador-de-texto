@@ -3,8 +3,8 @@ function toCript() {
     if (str != "") {
         document.getElementById("input_stream").value = "";
         document.getElementById("output_background").style.display = "none";
+        document.getElementById("clear-button").style.display = "block";
         genElement(encript(str));
-        //document.getElementById("output_stream").innerHTML = encript(str);
     }
 }
 
@@ -13,8 +13,8 @@ function toDecript() {
     if (str != "") {
         document.getElementById("input_stream").value = "";
         document.getElementById("output_background").style.display = "none";
+        document.getElementById("clear-button").style.display = "block";
         genElement(decript(str));
-        // document.getElementById("output_stream").innerHTML = decript(str);
     }
 }
 
@@ -82,7 +82,14 @@ function genElement(str) {
     tag.setAttribute("class", "teste");
     tag.appendChild(text);
     tag.appendChild(button);
-    // tag.style.width = "100%";
     var element = document.getElementById("mensagems");
     element.appendChild(tag);
+}
+
+function clean() {
+    document.querySelectorAll(".teste").forEach((mensagems) => {
+        mensagems.remove();
+    });
+    document.getElementById("output_background").style.display = "flex";
+    document.getElementById("clear-button").style.display = "none";
 }
