@@ -76,7 +76,7 @@ function genElement(str) {
     let button = document.createElement("button");
     let img = document.createElement("img");
 
-    img.setAttribute("src", "assets/bitmap.svg");
+    img.setAttribute("src", "assets/copy-button.svg");
 
     button.setAttribute("class", "copy-button");
     button.onclick = () => {
