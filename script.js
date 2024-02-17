@@ -1,7 +1,7 @@
 function toCript() {
-    let str = document.getElementById("input_stream").value
+    let str = document.getElementById("text-input").value
     if (str != "") {
-        document.getElementById("input_stream").value = "";
+        document.getElementById("text-input").value = "";
         document.getElementById("output_background").style.display = "none";
         document.getElementById("clear-button").style.display = "block";
         genElement(encript(str));
@@ -9,9 +9,9 @@ function toCript() {
 }
 
 function toDecript() {
-    let str = document.getElementById("input_stream").value
+    let str = document.getElementById("text-input").value
     if (str != "") {
-        document.getElementById("input_stream").value = "";
+        document.getElementById("text-input").value = "";
         document.getElementById("output_background").style.display = "none";
         document.getElementById("clear-button").style.display = "block";
         genElement(decript(str));

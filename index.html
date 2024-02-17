@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,32 +8,34 @@
     <link rel="stylesheet" href="style.css">
     <script src="./script.js"></script>
 </head>
+
 <body>
     <header>
         <img class="logo" src="./assets/alura-logo.svg" alt="logo da alura">
     </header>
     <main>
-        <section class="input">
-            <textarea class="text_stream" id="input_stream" placeholder="Digite seu texto" cols="30" rows="10"></textarea>
+        <section class="flex input">
+            <textarea class="text_stream" id="text-input" placeholder="Digite seu texto" cols="30" rows="10"></textarea>
             <div class="ho">
-                <p class="warning"><img src="./assets/caution.svg">Apenas letras minusculas e sem acento</p>
-                <div class="button-section">
+                <p class="flex warning"><img src="./assets/caution.svg">Apenas letras minusculas e sem acento</p>
+                <div class="flex button-section">
                     <button class="buttons" id="cript_button" onclick="toCript()">Criptografar</button>
                     <button class="buttons" id="decript_button" onclick="toDecript()">Descriptografar</button>
                 </div>
             </div>
         </section>
-        <section class="output">
-            <div id="output_background">
+        <section class="flex output">
+            <div class="flex" id="output_background">
                 <img src="./assets/no-input-background.svg">
-                <h2 class="info" id="title">Nenhuma mensagem encontrada</h2>
-                <p class="info" id="paragrafo">Digite um texto que você deseja criptografar ou descriptografar.</p>
+                <h2 class="info title">Nenhuma mensagem encontrada</h2>
+                <p class="info  paragrafo">Digite um texto que você deseja criptografar ou descriptografar.</p>
             </div>
-            <div class="output_active">
-                <div id="mensagems"></div>
+            <div class="flex output_active">
+                <div class="flex" id="mensagems"></div>
                 <button class="buttons" id="clear-button" style="display: none;" onclick="clean()">Limpar</button>
             </div>
         </section>
     </main>
 </body>
+
 </html>
