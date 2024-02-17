@@ -103,9 +103,9 @@ main {
 .buttons {
     border: 2px solid var(--cor-botao-fundo);
     border-radius: 20px;
+    background-color: transparent;
     font-family: var(--estilo-font);
     font-weight: 400;
-    /* max-width: 100%; */
     width: 328px;
     min-height: 67px;
 }
@@ -195,7 +195,7 @@ main {
     width: 40px;
     border-radius: 10px;
     border-style: none;
-    background-color: white;
+    background-color: var(--cor-primaria);
     box-shadow: 0 0 3px rgba(0, 0, 0, 0.20);
 }
 
@@ -206,12 +206,13 @@ main {
     font-family: var(--estilo-font);
     color: var(--cor-primaria);
     box-shadow: 0 1px 10px rgba(0, 0, 0, 0.30);
-    border-radius: 10px;
+    border-radius: 15px;
     width: 90%;
     height: 45px;
     /* min-height: 100%; */
     padding: 8px;
-    margin: 2px;
+    overflow-x: hidden;
+    overflow-y: hidden;
 }
 
 @media (max-width: 1040px) {

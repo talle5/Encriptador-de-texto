@@ -72,16 +72,16 @@ function decript(str) {
 
 function genElement(str) {
     let tag = document.createElement("div");
-    let text = document.createTextNode(str);
+    let text = document.createElement("p");
     let button = document.createElement("button");
     let img = document.createElement("img");
 
-    img.setAttribute("src", "assets/copy-button.svg");
+    img.src = "assets/copy-button.svg";
+
+    text.innerHTML = str;
 
     button.setAttribute("class", "copy-button");
-    button.onclick = () => {
-        navigator.clipboard.writeText(str);
-    };
+    button.onclick = () => navigator.clipboard.writeText(str);
     button.appendChild(img);
 
     tag.setAttribute("class", "teste");
