@@ -15,24 +15,27 @@
     </header>
     <main>
         <section class="flex input">
-            <textarea class="text_stream" id="text-input" placeholder="Digite seu texto" cols="30" rows="10"></textarea>
-            <div class="ho">
-                <p class="flex warning"><img src="./assets/caution.svg">Apenas letras minusculas e sem acento</p>
-                <div class="flex button-section">
-                    <button class="buttons" id="cript_button" onclick="toCript()">Criptografar</button>
-                    <button class="buttons" id="decript_button" onclick="toDecript()">Descriptografar</button>
+            <textarea id="text_input" placeholder="Digite seu texto" cols="30" rows="10"></textarea>
+            <div>
+                <div class="flex warning">
+                    <img src="./assets/caution.svg">
+                    <p>Apenas letras minusculas e sem acento</p>
+                </div>
+                <div class="flex button_section">
+                    <button class="button cript_button" title="criptografar" onclick="toCript()">Criptografar</button>
+                    <button class="button decript_button" title="descriptografar" onclick="toDecript()">Descriptografar</button>
                 </div>
             </div>
         </section>
         <section class="flex output">
             <div class="flex" id="output_background">
-                <img src="./assets/no-input-background.svg">
-                <h2 class="info title">Nenhuma mensagem encontrada</h2>
-                <p class="info  paragrafo">Digite um texto que você deseja criptografar ou descriptografar.</p>
+                <img id="no_input_img" src="./assets/no-input-img.svg">
+                <h2 class="title">Nenhuma mensagem encontrada</h2>
+                <p class="paragrafo">Digite um texto que você deseja criptografar ou descriptografar.</p>
             </div>
-            <div class="flex output_active">
-                <div class="flex" id="mensagems"></div>
-                <button class="buttons" id="clear-button" onclick="clean()">Limpar</button>
+            <div class="flex history">
+                <div class="flex" id="list"></div>
+                <button class="button" id="clean" title="Limpar" onclick="clean()">Limpar</button>
             </div>
         </section>
     </main>

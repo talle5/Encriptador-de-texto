@@ -1,19 +1,19 @@
 function toCript() {
-    let str = document.getElementById("text-input").value
+    let str = document.getElementById("text_input").value
     if (str != "") {
-        document.getElementById("text-input").value = "";
+        document.getElementById("text_input").value = "";
         document.getElementById("output_background").style.display = "none";
-        document.getElementById("clear-button").style.display = "block";
+        document.getElementById("clean").style.display = "block";
         genElement(encript(str));
     }
 }
 
 function toDecript() {
-    let str = document.getElementById("text-input").value
+    let str = document.getElementById("text_input").value
     if (str != "") {
-        document.getElementById("text-input").value = "";
+        document.getElementById("text_input").value = "";
         document.getElementById("output_background").style.display = "none";
-        document.getElementById("clear-button").style.display = "block";
+        document.getElementById("clean").style.display = "block";
         genElement(decript(str));
     }
 }
@@ -80,21 +80,19 @@ function genElement(str) {
 
     text.innerHTML = str;
 
-    button.setAttribute("class", "copy-button");
+    button.setAttribute("class", "copy_button");
     button.onclick = () => navigator.clipboard.writeText(str);
     button.appendChild(img);
 
-    tag.setAttribute("class", "teste");
+    tag.setAttribute("class", "messages");
     tag.appendChild(text);
     tag.appendChild(button);
-    
-    document.getElementById("mensagems").appendChild(tag);
+
+    document.getElementById("list").appendChild(tag);
 }
 
 function clean() {
-    document.querySelectorAll(".teste").forEach((mensagems) => {
-        mensagems.remove();
-    });
+    document.querySelectorAll(".messages").forEach((list) => list.remove());
     document.getElementById("output_background").style.display = "flex";
-    document.getElementById("clear-button").style.display = "none";
+    document.getElementById("clean").style.display = "none";
 }
