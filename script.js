@@ -1,5 +1,5 @@
 function toCript() {
-    let str = document.getElementById("text_input").value
+    let str = document.getElementById("text_input").value;
     if (str != "") {
         document.getElementById("text_input").value = "";
         document.getElementById("output_background").style.display = "none";
@@ -9,7 +9,7 @@ function toCript() {
 }
 
 function toDecript() {
-    let str = document.getElementById("text_input").value
+    let str = document.getElementById("text_input").value;
     if (str != "") {
         document.getElementById("text_input").value = "";
         document.getElementById("output_background").style.display = "none";
@@ -51,19 +51,19 @@ function decript(str) {
         arr.push(str[i]);
         switch (str[i]) {
             case "e":
-                i += 4;
-                break;
-            case "i":
-                i += 3;
+                if (str.substring(i,i+5) == "enter") {  i += 4; }
                 break;
             case "a":
-                i += 1;
+                if (str.substring(i,i+2) == "ai") {  i += 1; }
                 break;
             case "o":
-                i += 3;
+                if (str.substring(i,i+4) == "ober") {  i += 3; }
                 break;
             case "u":
-                i += 3;
+                if (str.substring(i,i+4) == "ufat" ) {  i += 3; }
+                break;
+            case "i":
+                if (str.substring(i,i+4) == "imes") {  i += 3; }
                 break;
         }
     }
@@ -80,11 +80,11 @@ function genElement(str) {
 
     text.innerHTML = str;
 
-    button.setAttribute("class", "copy_button");
+    button.id = "copy_button";
     button.onclick = () => navigator.clipboard.writeText(str);
     button.appendChild(img);
 
-    tag.setAttribute("class", "messages");
+    tag.class = "messages";
     tag.appendChild(text);
     tag.appendChild(button);
 

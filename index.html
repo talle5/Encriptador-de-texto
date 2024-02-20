@@ -11,30 +11,30 @@
 
 <body>
     <header>
-        <img class="logo" src="./assets/alura-logo.svg" alt="logo da alura">
+        <img src="./assets/alura-logo.svg" alt="logo da alura">
     </header>
     <main>
-        <section class="flex input">
-            <textarea id="text_input" placeholder="Digite seu texto" cols="30" rows="10"></textarea>
+        <section class="flex" id="input">
+            <textarea class="fullcontent" id="text_input" placeholder="Digite seu texto"></textarea>
             <div>
-                <div class="flex warning">
+                <div class="flex" id="warning">
                     <img src="./assets/caution.svg">
                     <p>Apenas letras minusculas e sem acento</p>
                 </div>
-                <div class="flex button_section">
-                    <button class="button cript_button" title="criptografar" onclick="toCript()">Criptografar</button>
-                    <button class="button decript_button" title="descriptografar" onclick="toDecript()">Descriptografar</button>
+                <div class="flex" id="button_section">
+                    <button class="button" id="cript_button" title="criptografar" onclick="toCript()">Criptografar</button>
+                    <button class="button" id="decript_button" title="descriptografar" onclick="toDecript()">Descriptografar</button>
                 </div>
             </div>
         </section>
-        <section class="flex output">
+        <section class="flex" id="output">
             <div class="flex" id="output_background">
                 <img id="no_input_img" src="./assets/no-input-img.svg">
                 <h2 class="title">Nenhuma mensagem encontrada</h2>
                 <p class="paragrafo">Digite um texto que você deseja criptografar ou descriptografar.</p>
             </div>
-            <div class="flex history">
-                <div class="flex" id="list"></div>
+            <div class="flex fullcontent" id="history">
+                <div class="flex fullwidth" id="list"></div>
                 <button class="button" id="clean" title="Limpar" onclick="clean()">Limpar</button>
             </div>
         </section>
