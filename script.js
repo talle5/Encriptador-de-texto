@@ -13,7 +13,6 @@ const decode = (action) => {
         genElement(action(str));
     }
 };
-
 encriptButton.onclick = () => decode(encript);
 decriptButton.onclick = () => decode(decript);
 cleanButton.onclick = () => {

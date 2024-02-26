@@ -156,15 +156,19 @@ main {
 #list {
     box-sizing: border-box;
     gap: 15px;
-    padding: 15px 0;
+    padding: 10px 0;
     overflow-y: auto;
+}
+
+#list::-webkit-scrollbar-button {
+    display: block;
 }
 
 #history {
     box-sizing: border-box;
     justify-content: space-between;
     gap: 30px;
-    padding: 10px 0 8% 0;
+    padding: 3% 0 8% 0;
 }
 
 #clean {
@@ -187,6 +191,7 @@ main {
     justify-content: space-between;
     align-items: center;
     font-size: 1.1rem;
+    word-break: break-word;
     color: var(--cor-principal);
     box-shadow: 0 1px 10px rgba(0, 0, 0, 0.30);
     border-radius: 20px;
@@ -200,17 +205,18 @@ main {
         margin: 4%;
     }
 
-    body,
-    main {
+    body {
         flex-direction: column;
     }
 
     main {
+        flex-direction: column;
         padding: 0;
         gap: 50px;
     }
 
     #input {
+        max-width: none;
         padding: 0;
         width: 90%;
     }
@@ -226,16 +232,17 @@ main {
     }
 
     #output_background {
-        width: auto;
+        width: 80%;
     }
 
     #no_input_img {
         display: none;
     }
 
-    #clean {
-        margin: 0;
+    #history {
+        padding: 10px 0 20px 0;
     }
+
 }
 
 @media (max-width: 770px) {
